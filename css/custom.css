@@ -104,7 +104,7 @@ td .content {
 
 .collapsing {
     
-    -webkit-transition: all 0.50s ease;
-    -o-transition: all 0.50s ease;
-    transition: all 0.50s ease;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
 }
