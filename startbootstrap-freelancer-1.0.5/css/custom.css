@@ -88,14 +88,19 @@ td .content {
    	border-style: solid;
     border-color: #2c3e50;
 }
-
 .panel-body{
     padding:0px;
+    min-height: 100%;
 }
+
 .panel{
+
     margin-bottom: 2px;
 }
 
 .crassword-blue{
     color: #2c3e50;
+}
+.collapsing {
+    transition: height 1.0s;
 }

@@ -17,8 +17,9 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <!-- <link rel="stylesheet" href="page-scroll-effects/css/reset.css"> <!-- CSS reset --> 
-    <link rel="stylesheet" href="page-scroll-effects/css/style.css"> <!-- Resource style -->
+    <!-- <link rel="stylesheet" href="page-scroll-effects/css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="page-scroll-effects/css/style.css">
+    <!-- Resource style -->
     <script src="page-scroll-effects/js/modernizr.js" type="text/javascript"></script>
     <link href="css/freelancer.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
@@ -32,9 +33,9 @@
 
 <body id="page-top" class="index" data-hijacking="off" data-animation="scaleDown">
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <!--     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
+            <!-- Brand and toggle get grouped for better mobile display 
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -44,7 +45,7 @@
                 </button>
                 <a class="navbar-brand" href="#page-top">CRASSWORD</a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- Collect the nav links, forms, and other content for toggling 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
@@ -56,43 +57,53 @@
                     <li class="page-scroll">
                         <a href="#step2" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">Step 2</a>
                     </li>
-                    <li >
+                    <li class="page-scroll">
                         <a href="#step3" data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">step 3</a>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+            <!-- /.navbar-collapse 
         </div>
-        <!-- /.container-fluid -->
-    </nav>
-
+        <!-- /.container-fluid 
+    </nav> -->
     <!-- Header -->
     <div id="accordion">
-        <header>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <img class="img-responsive" src="img/profile1.png" alt="">
-                        <div class="intro-text">
-                            <hr class="star-light">
-                            <span class="skills">Sequence-Matrix Password Generator</span>
+        <div class="panel panel-default" id="step0">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse0">CRASSWORD</a>
+                </h4>
+            </div>
+            <header id="collapse0" class="accordion-body panel-collapse collapse in">
+                <div>
+                    <div class="panel-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <img class="img-responsive" src="img/profile1.png" alt="">
+                                    <div class="intro-text">
+                                        <hr class="star-light">
+                                        <span class="skills">Sequence-Matrix Password Generator</span>
+                                    </div>
+                                </div>
+                                <div class="page-scroll">
+                                    <a href="#" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
+                                        <button type="button" class="next-btn col-lg-4 col-lg-offset-4 col-xs-12 col-xs-offset-0">START</button>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="page-scroll">
-                        <a href="#step1" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
-                            <button type="button" class="next-btn col-lg-4 col-lg-offset-4 col-xs-12 col-xs-offset-0">START</button>
-                        </a>
-                    </div>
                 </div>
-            </div>
-        </header>
+            </header>
+        </div>
         <div class="panel panel-default" id="step1">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Step 1</a>
                 </h4>
             </div>
-            <div id="collapse1" class="panel-collapse collapse">
+            <div id="collapse1" class="accordion-body panel-collapse collapse">
                 <div class="panel-body">
                     <section>
                         <div class="container">
@@ -114,7 +125,7 @@
                                 </div>
                             </div>
                             <div class="page-scroll">
-                                <a href="#step2" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+                                <a href="#" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
                                     <button type="button" class="next-btn col-lg-4 col-lg-offset-4 col-xs-12 col-xs-offset-0">NEXT</button>
                                 </a>
                             </div>
@@ -130,7 +141,7 @@
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Step 2</a>
                 </h4>
             </div>
-            <div id="collapse2" class="panel-collapse collapse">
+            <div id="collapse2" class="accordion-body panel-collapse collapse">
                 <div class="panel-body">
                     <section class="success">
                         <div class="container">
@@ -163,7 +174,7 @@
                                 </div>
                             </div>
                             <div class="page-scroll">
-                                <a href="#step3" data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">
+                                <a href="#" data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">
                                     <button type="button" class="next-btn col-lg-4 col-lg-offset-4 col-xs-12 col-xs-offset-0">NEXT</button>
                                 </a>
                             </div>
@@ -179,7 +190,7 @@
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Step 3</a>
                 </h4>
             </div>
-            <div id="collapse3" class="panel-collapse collapse">
+            <div id="collapse3" class="accordion-body panel-collapse collapse">
                 <div class="panel-body">
                     <section>
                         <div class="container">
@@ -319,21 +330,18 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
+    <!-- <script src="js/classie.js"></script> -->
+    <!-- <script src="js/cbpAnimatedHeader.js"></script> -->
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
     <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
+    <!-- <script src="js/freelancer.js"></script> -->
     <!-- Custom Functional JavaScript -->
     <script src="js/Password.js" type="text/javascript"></script>
-
-    
     <script src="page-scroll-effects/js/velocity.min.js" type="text/javascript"></script>
     <script src="page-scroll-effects/js/velocity.ui.min.js" type="text/javascript"></script>
     <script src="page-scroll-effects/js/main.js" type="text/javascript"></script>
-
     <script type="text/javascript">
     $('#sequence-input').keydown(function(e) {
         switch (e.which) {
@@ -502,6 +510,15 @@
         })
 
     })
+
+    $('#accordion').on('shown.bs.collapse', function(e) {
+        var offset = $('.panel.panel-default > .panel-collapse.in').offset();
+        if (offset) {
+            $('html,body').animate({
+                scrollTop: $('.panel-collapse.in').siblings('.panel-heading').offset().top
+            }, 800);
+        }
+    });
     </script>
 </body>
 
