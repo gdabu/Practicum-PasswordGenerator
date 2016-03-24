@@ -101,6 +101,7 @@ td .content {
 .crassword-blue{
     color: #2c3e50;
 }
-.collapsing {
-    transition: height 1.0s;
+.panel .panel-collapse .collapse {
+    transition: transform .99s ease-in-out;
+    -webkit-transition: -webkit-transform .99s ease-in-out;
 }
