@@ -17,6 +17,11 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- <link rel="stylesheet" href="page-scroll-effects/css/reset.css"> <!-- CSS reset --> 
+    <link rel="stylesheet" href="page-scroll-effects/css/style.css"> <!-- Resource style -->
+    <script src="page-scroll-effects/js/modernizr.js" type="text/javascript"></script>
+    <link href="css/freelancer.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -25,7 +30,7 @@
     <![endif]-->
 </head>
 
-<body id="page-top" class="index">
+<body id="page-top" class="index" data-hijacking="off" data-animation="scaleDown">
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -46,13 +51,13 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#step1">Step 1</a>
+                        <a href="#step1" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">Step 1</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#step2">Step 2</a>
+                        <a href="#step2" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">Step 2</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#step3">step 3</a>
+                    <li >
+                        <a href="#step3" data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">step 3</a>
                     </li>
                 </ul>
             </div>
@@ -60,141 +65,206 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+
     <!-- Header -->
-    <section id="step1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile2.png" alt="">
-                    <div class="intro-text">
-                        <span class="name">Enter Sequence:</span>
-                        <input type="text" id="sequence-input" placeholder="e.g. LRUDULUL">
-                        <hr class="star-light">
-                        <div class="arrow-icons">
-                            <div class="col-lg-1 col-xs-4 col-lg-offset-4 col-xs-offset-2 "><img id="left-icon" class="arrow-icon" src="img/icons/left-b.png"></div>
-                            <div class="col-lg-1 col-xs-4"><img id="up-icon" class="arrow-icon" src="img/icons/up-b.png"></div>
-                            <div class="col-lg-1 col-xs-4 col-lg-offset-0 col-xs-offset-2"><img id="down-icon" class="arrow-icon" src="img/icons/down-b.png"></div>
-                            <div class="col-lg-1 col-xs-4"><img id="right-icon" class="arrow-icon" src="img/icons/right-b.png"></div>
+    <div id="accordion">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <img class="img-responsive" src="img/profile1.png" alt="">
+                        <div class="intro-text">
+                            <hr class="star-light">
+                            <span class="skills">Sequence-Matrix Password Generator</span>
                         </div>
+                    </div>
+                    <div class="page-scroll">
+                        <a href="#step1" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
+                            <button type="button" class="next-btn col-lg-4 col-lg-offset-4 col-xs-12 col-xs-offset-0">START</button>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div>
-                <button type="button" class="next-btn col-lg-4 col-lg-offset-4 col-xs-12 col-xs-offset-0">NEXT</button>
+        </header>
+        <div class="panel panel-default" id="step1">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Step 1</a>
+                </h4>
             </div>
-        </div>
-    </section>
-    <!-- Portfolio Grid Section -->
-    <section id="step2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>SELECT SOCIAL MEDIA:</h2>
-                    <h6>(Passwords will be created for each of the selected social media accounts)</h6>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <!-- <div class="col-lg-3"></div> -->
-                <div class="col-sm-1 col-lg-1 col-lg-offset-3">
-                    <img class="facebook-icon img-responsive media-icon" src="img/icons/social/grey/Facebook.png" alt="" data-toggle="off">
-                </div>
-                <div class="col-sm-1">
-                    <img class="instagram-icon img-responsive media-icon" src="img/icons/social/grey/Instagram.png" alt="" data-toggle="off">
-                </div>
-                <div class="col-sm-1">
-                    <img class="linkedin-icon img-responsive media-icon" src="img/icons/social/grey/Linkedin.png" alt="" data-toggle="off">
-                </div>
-                <div class="col-sm-1">
-                    <img class="google-icon img-responsive media-icon" src="img/icons/social/grey/Google+.png" alt="" data-toggle="off">
-                </div>
-                <div class="col-sm-1">
-                    <img class="github-icon img-responsive media-icon" src="img/icons/social/grey/Github.png" alt="" data-toggle="off">
-                </div>
-                <div class="col-sm-1">
-                    <img class="twitter-icon img-responsive media-icon" src="img/icons/social/grey/Twitter.png" alt="" data-toggle="off">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About Section -->
-    <section class="success" id="step3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-lg-offset-3">
-                    <table >
-                        <tr>
-                            <td>
-                                <div class="content">1</div>
-                            </td>
-                            <td>
-                                <div class="content">1</div>
-                            </td>
-                            <td>
-                                <div class="content">1</div>
-                            </td>
-                            <td>
-                                <div class="content">1</div>
-                            </td>
-                        </tr>
-                        <tr>
-                        <td>
-                                <div class="content">1</div>
-                            </td>
-                            <td>
-                                <div class="content">1</div>
-                            </td>
-                            <td>
-                                <div class="content">1</div>
-                            </td>
-                            <td>
-                                <div class="content">1</div>
-                            </td>
-                        </tr>
-                        <tr>
-                        <td>
-                                <div class="content">1</div>
-                            </td>
-                            <td>
-                                <div class="content">1</div>
-                            </td>
-                            <td>
-                                <div class="content">1</div>
-                            </td>
-                            <td>
-                                <div class="content">1</div>
-                            </td>
-                        </tr>
-                        <tr>
-                        <td>
-                                <div class="content">1</div>
-                            </td>
-                            <td>
-                                <div class="content">1</div>
-                            </td>
-                            <td>
-                                <div class="content">1</div>
-                            </td>
-                            <td>
-                                <div class="content">1</div>
-                            </td>
-                        </tr>
-                    </table>
+            <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <section>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <div class="intro-text">
+                                        <div class="col-lg-12 text-center">
+                                            <h2 class="crassword-blue">STEP 1. ENTER SEQUENCE:</h2>
+                                            <hr class="star-primary">
+                                        </div>
+                                        <input type="text" id="sequence-input" placeholder="e.g. LRUDULUL">
+                                        <div class="arrow-container">
+                                            <div class="col-lg-1 col-xs-4 col-lg-offset-4 col-xs-offset-2 "><img id="left-icon" class="arrow-icon" src="img/icons/left-b.png"></div>
+                                            <div class="col-lg-1 col-xs-4"><img id="up-icon" class="arrow-icon" src="img/icons/up-b.png"></div>
+                                            <div class="col-lg-1 col-xs-4 col-lg-offset-0 col-xs-offset-2"><img id="down-icon" class="arrow-icon" src="img/icons/down-b.png"></div>
+                                            <div class="col-lg-1 col-xs-4"><img id="right-icon" class="arrow-icon" src="img/icons/right-b.png"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-scroll">
+                                <a href="#step2" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+                                    <button type="button" class="next-btn col-lg-4 col-lg-offset-4 col-xs-12 col-xs-offset-0">NEXT</button>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
-    </section>
+        <!-- Portfolio Grid Section -->
+        <div class="panel panel-default" id="step2">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Step 2</a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <section class="success">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <h2>STEP 2. SELECT SOCIAL MEDIA:</h2>
+                                    <h6>(Passwords will be created for each of the selected social media accounts)</h6>
+                                    <hr class="star-light">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- <div class="col-lg-3"></div> -->
+                                <div class="col-sm-1 col-lg-1 col-lg-offset-3">
+                                    <img class="facebook-icon img-responsive media-icon" src="img/icons/social/grey/Facebook.png" alt="" data-toggle="off">
+                                </div>
+                                <div class="col-sm-1">
+                                    <img class="instagram-icon img-responsive media-icon" src="img/icons/social/grey/Instagram.png" alt="" data-toggle="off">
+                                </div>
+                                <div class="col-sm-1">
+                                    <img class="linkedin-icon img-responsive media-icon" src="img/icons/social/grey/Linkedin.png" alt="" data-toggle="off">
+                                </div>
+                                <div class="col-sm-1">
+                                    <img class="google-icon img-responsive media-icon" src="img/icons/social/grey/Google+.png" alt="" data-toggle="off">
+                                </div>
+                                <div class="col-sm-1">
+                                    <img class="github-icon img-responsive media-icon" src="img/icons/social/grey/Github.png" alt="" data-toggle="off">
+                                </div>
+                                <div class="col-sm-1">
+                                    <img class="twitter-icon img-responsive media-icon" src="img/icons/social/grey/Twitter.png" alt="" data-toggle="off">
+                                </div>
+                            </div>
+                            <div class="page-scroll">
+                                <a href="#step3" data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">
+                                    <button type="button" class="next-btn col-lg-4 col-lg-offset-4 col-xs-12 col-xs-offset-0">NEXT</button>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- About Section -->
+        <div class="panel panel-default" id="step3">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Step 3</a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <section>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <h2 class="crassword-blue">STEP 3. GENERATE PASSWORDS</h2>
+                                    <hr class="star-primary">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-lg-offset-3">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <div class="content"><span>1</span></div>
+                                            </td>
+                                            <td>
+                                                <div class="content">1</div>
+                                            </td>
+                                            <td>
+                                                <div class="content">1</div>
+                                            </td>
+                                            <td>
+                                                <div class="content">1</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="content">1</div>
+                                            </td>
+                                            <td>
+                                                <div class="content">1</div>
+                                            </td>
+                                            <td>
+                                                <div class="content">1</div>
+                                            </td>
+                                            <td>
+                                                <div class="content">1</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="content">1</div>
+                                            </td>
+                                            <td>
+                                                <div class="content">1</div>
+                                            </td>
+                                            <td>
+                                                <div class="content">1</div>
+                                            </td>
+                                            <td>
+                                                <div class="content">1</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="content">1</div>
+                                            </td>
+                                            <td>
+                                                <div class="content">1</div>
+                                            </td>
+                                            <td>
+                                                <div class="content">1</div>
+                                            </td>
+                                            <td>
+                                                <div class="content">1</div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div>
+                                <button type="button" class="next-btn col-lg-4 col-lg-offset-4 col-xs-12 col-xs-offset-0">PRINT</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
             <div class="container">
-                <div class="row">
+                <!-- <div class="row">
                     <div class="footer-col col-md-4">
                         <h3>Location</h3>
                         <p>3481 Melrose Place
@@ -224,14 +294,14 @@
                         <h3>About Freelancer</h3>
                         <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="footer-below">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Your Website 2014
+                        Mega Harold Ltd. 2016
                     </div>
                 </div>
             </div>
@@ -242,229 +312,6 @@
         <a class="btn btn-primary" href="#page-top">
             <i class="fa fa-chevron-up"></i>
         </a>
-    </div>
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/game.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/safe.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -481,6 +328,12 @@
     <script src="js/freelancer.js"></script>
     <!-- Custom Functional JavaScript -->
     <script src="js/Password.js" type="text/javascript"></script>
+
+    
+    <script src="page-scroll-effects/js/velocity.min.js" type="text/javascript"></script>
+    <script src="page-scroll-effects/js/velocity.ui.min.js" type="text/javascript"></script>
+    <script src="page-scroll-effects/js/main.js" type="text/javascript"></script>
+
     <script type="text/javascript">
     $('#sequence-input').keydown(function(e) {
         switch (e.which) {
@@ -647,8 +500,6 @@
                 $('.twitter-icon').data("toggle", "off")
             }
         })
-
-
 
     })
     </script>

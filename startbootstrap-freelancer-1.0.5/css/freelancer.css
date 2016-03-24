@@ -32,7 +32,7 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "osp-din", Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
@@ -79,46 +79,46 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
-#step1 {
+header {
     text-align: center;
     color: #fff;
     background: #18bc9c;
 }
 
-#step1 .container {
+header .container {
     padding-top: 100px;
     padding-bottom: 50px;
 }
 
-#step1 img {
+header img {
     display: block;
     margin: 0 auto 20px;
 }
 
-#step1 .intro-text .name {
+header .intro-text .name {
     display: block;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "osp-din", Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
     font-weight: 700;
 }
 
-#step1 .intro-text .skills {
+header .intro-text .skills {
     font-size: 1.25em;
     font-weight: 300;
 }
 
 @media(min-width:768px) {
-    #step1 .container {
-        padding-top: 60px;
+    header .container {
+        padding-top: 180px;
         padding-bottom: 60px;
     }
 
-    #step1 .intro-text .name {
+    header .intro-text .name {
         font-size: 3em;
     }
 
-    #step1 .intro-text .skills {
+    header .intro-text .skills {
         font-size: 1.75em;
     }
 }
@@ -149,7 +149,7 @@ hr.star-primary:after {
 
 .navbar {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "osp-din", Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 

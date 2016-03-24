@@ -9,14 +9,14 @@
         width: 500px;
         text-align: center;
         text-transform: uppercase;
-        font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: "osp-din", Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 2em;
         font-weight: 700;
     }
 }
 
 .step-label {
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "osp-din", Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 2em;
     font-weight: 700;
 }
@@ -28,10 +28,11 @@
     -webkit-box-shadow: 0px 4px 11px #666666;
     -moz-box-shadow: 0px 4px 11px #666666;
     box-shadow: 0px 4px 11px #666666;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "osp-din", Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #ffffff;
     font-size: 30px;
     padding: 10px;
+    margin-top: 80px;
     background: #e05b49;
     border: solid #2c3e50 9px;
     text-decoration: none;
@@ -40,6 +41,10 @@
 .next-btn:hover {
     background: #2c3e50;
     text-decoration: none;
+}
+
+.arrow-container {
+    margin-top: 40px;
 }
 
 .media-icon,
@@ -73,8 +78,8 @@ td:after {
 td .content {
 	font-size: 4vw;
 	text-align: center;
-	vertical-align: middle;
     position: absolute;
+    font-family: "osp-din", Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     top: 0;
     bottom: 0;
     left: 0;
@@ -82,4 +87,15 @@ td .content {
     background: grey;
    	border-style: solid;
     border-color: #2c3e50;
+}
+
+.panel-body{
+    padding:0px;
+}
+.panel{
+    margin-bottom: 2px;
+}
+
+.crassword-blue{
+    color: #2c3e50;
 }
