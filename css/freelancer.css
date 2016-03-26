@@ -31,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
+    
     font-family: "osp-din", Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
@@ -86,7 +86,7 @@ header {
 }
 
 header .container {
-    padding-top: 100px;
+    padding-top: 60px;
     padding-bottom: 50px;
 }
 
@@ -110,7 +110,7 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     header .container {
-        padding-top: 120px;
+        padding-top: 80px;
         padding-bottom: 60px;
     }
 
