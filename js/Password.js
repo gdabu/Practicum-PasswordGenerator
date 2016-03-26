@@ -87,6 +87,17 @@ function plotPassword(startX, startY, sequence, matrix) {
     return [sequenceCoords, plottedPassword]
 }
 
+function validateSeq(sequence){
+	sequence = sequence.toLowerCase()
+	for(var i = 0 ; i < sequence.length; i++){
+		if(sequence[i] == "u" || sequence[i] == "d" || sequence[i] == "l" || sequence[i] == "r"){
+			return true
+		}else{
+			throw "Value Error: Sequence contains a value other than ULDR"
+		}
+	}
+}
+
 var colors = ['#1abc9c', '#2ecc71', '#3498db', '#9b59b6', '#f1c40f', '#e67e22', '#e74c3c', '#ecf0f1']
 
 $(document).ready(function(e) {
@@ -103,14 +114,20 @@ $(document).ready(function(e) {
         }
     });
 
-    $('.step1-next-button').click(function(e) {
+    $('#step1-next-button').click(function(e) {
         sequence = $('#sequence-input').val()
-        document.getElementById('step3-side-bar').style.visibility = "hidden"
+        try{
+        	validateSeq(sequence)
+        }catch(err){
+        	console.log(err)
+        	return
+        }
+        $("#step3-side-bar-container").empty()
         $("#password-matrix").empty()
         $("#text-sequence").empty()
     })
 
-    $('.step2-next-button').click(function(e) {
+    $('#step2-next-button').click(function(e) {
         accounts = []
         $('.media-icon').each(function(e) {
             // console.log($(this))
@@ -118,7 +135,7 @@ $(document).ready(function(e) {
                 accounts.push($(this).data('media-type'))
         })
 
-        document.getElementById('step3-side-bar').style.visibility = "hidden"
+        $("#step3-side-bar-container").empty()
         $("#password-matrix").empty()
         $("#text-sequence").empty()
     })
@@ -162,7 +179,7 @@ $(document).ready(function(e) {
 
 
         //add account list to side bar        
-        document.getElementById('step3-side-bar').style.visibility = "visible"
+        $("#step3-side-bar-container").append("<div id='step3-side-bar'></div>")
         passwordList = []
 
         //plot the passwords
@@ -183,8 +200,8 @@ $(document).ready(function(e) {
 
             passwordList.push(new Password(accounts[i], passwordDetails[1], passwordDetails[0], colors[i]))
         }
-        $('#step3-side-bar').append("<div class='step3-side-bar-reset' style='background-color:grey;''><div><h3>Show All</h3></div></div>")
-        $('#step3-side-bar').append("<div class='step3-side-bar-print' style='background-color:black;''><div><h3>Print</h3></div></div>")
+        $('#step3-side-bar').append("<div class='step3-side-bar-reset' style='background-color:grey;'><div><h3>Show All</h3></div></div>")
+        $('#step3-side-bar').append("<div class='step3-side-bar-print' style='background-color:black;'><div><h3>Print</h3></div></div>")
 
 
         $('.step3-side-bar-reset').click(function(e) {
@@ -200,7 +217,6 @@ $(document).ready(function(e) {
 
         $('.step3-side-bar-print').click(function(e) {
         	$.print('#password-matrix')
-        	
         })
 
         $('.step3-side-bar-item').click(function(e) {
@@ -212,6 +228,10 @@ $(document).ready(function(e) {
 
             console.log(passwordList[i])
 
+            // for (var j = 0; j < passwordList[i].path.length; j++) {
+
+            //     $('#password-matrix-' + passwordList[i].path[j].y + '-' + passwordList[i].path[j].x + ' div.content').delay(750).qcss({"background-color": passwordList[i].color})
+            // }
             var j = 0
             var loop = setInterval(function() {
                 if (j == passwordList[i].path.length - 1) {
