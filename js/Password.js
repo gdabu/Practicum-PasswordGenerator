@@ -184,6 +184,7 @@ $(document).ready(function(e) {
             passwordList.push(new Password(accounts[i], passwordDetails[1], passwordDetails[0], colors[i]))
         }
         $('#step3-side-bar').append("<div class='step3-side-bar-reset' style='background-color:grey;''><div><h3>Show All</h3></div></div>")
+        $('#step3-side-bar').append("<div class='step3-side-bar-print' style='background-color:black;''><div><h3>Print</h3></div></div>")
 
 
         $('.step3-side-bar-reset').click(function(e) {
@@ -197,6 +198,11 @@ $(document).ready(function(e) {
             }
         })
 
+        $('.step3-side-bar-print').click(function(e) {
+        	$.print('#password-matrix')
+        	
+        })
+
         $('.step3-side-bar-item').click(function(e) {
 
             $('.matrix-password-cell').css('background-color', 'grey')
@@ -206,10 +212,6 @@ $(document).ready(function(e) {
 
             console.log(passwordList[i])
 
-            // for (var j = 0; j < passwordList[i].path.length; j++) {
-
-            //     $('#password-matrix-' + passwordList[i].path[j].y + '-' + passwordList[i].path[j].x + ' div.content').delay(750).qcss({"background-color": passwordList[i].color})
-            // }
             var j = 0
             var loop = setInterval(function() {
                 if (j == passwordList[i].path.length - 1) {
