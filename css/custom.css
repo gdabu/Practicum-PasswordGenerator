@@ -147,7 +147,7 @@ td .content {
     border-color: black; 
 }
 
-.step3-side-bar-item, .step3-side-bar-reset{
+.step3-side-bar-item, .step3-side-bar-reset, .step3-side-bar-print{
     cursor: hand;
     cursor: pointer;
 }

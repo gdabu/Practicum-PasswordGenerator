@@ -246,7 +246,7 @@ $(document).ready(function(e) {
                     .qcss({ "font-size": '3.0vw' })
 
                 j++
-            }, 100)
+            }, 250)
         })
     })
 
